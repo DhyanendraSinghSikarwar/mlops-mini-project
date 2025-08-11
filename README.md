@@ -55,3 +55,16 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+
+<!-- https://dagshub.com/dhyanendra.manit/mlops-mini-project.mlflow
+import dagshub
+dagshub.init(repo_owner='dhyanendra.manit', repo_name='mlops-mini-project', mlflow=True)
+
+import mlflow
+with mlflow.start_run():
+  mlflow.log_param('parameter name', 'value')
+  mlflow.log_metric('metric name', 1) -->
+
+<!-- mlflow UI: https://dagshub.com/dhyanendra.manit/mlops-mini-project.mlflow/ -->

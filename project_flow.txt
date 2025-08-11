@@ -1,0 +1,15 @@
+1. use cookiecutter for template
+2. update/delete the files and folder if require inside src
+3. initializing the git at local
+3. create git hub repo with same name and add remote repo with local and push the existing files 
+4. connect dagshub with github repo and copy the experiment_id and other required code
+5. create the dagshub_setup.py inside notebooks folder and setup dagshub
+-------plan of project---
+we have tweet emotion data,first we will apply BoW and TfIdf with algoriths like logisticRegression,
+RandomForest, Xgb, etc which ever combination give good result, we take that combination and run
+hyperparameter tuining on that combination then use dvc pipeline and register the model.
+exp1- Bow + algos 
+exp2- TfIdf + algos
+exp3- hyperparameter tuning with best combination
+These experiments will be written in jupyterNotebook and tracked by dagshub
+
