@@ -13,3 +13,7 @@ exp2- TfIdf + algos
 exp3- hyperparameter tuning with best combination
 These experiments will be written in jupyterNotebook and tracked by dagshub
 
+6. In exp-1 , we used jupyternotebook to perform the experiment and tracked in dagshub using mlflow. here we run the logisticRegression Baseline model
+7. In exp-2 , we perform apply Bow and Tfidf as preprocessing and apply different models and find Bow and LoR is having better accuracy(f1 score).
+so, we will choose it and apply hyperparameter tuning at this combination. although, we can try hyperparameter tuning with all combination
+
