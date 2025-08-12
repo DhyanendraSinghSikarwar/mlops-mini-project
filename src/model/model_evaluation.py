@@ -117,6 +117,9 @@ def save_model_info(run_id: str, model_path: str, file_path: str) -> None:
         raise
 
 def main():
+    # Ensure reports directory exists
+    os.makedirs('reports', exist_ok=True)
+    
     mlflow.set_experiment("dvc-pipeline")
     with mlflow.start_run() as run:  # Start an MLflow run
         try:
@@ -153,11 +156,12 @@ def main():
             # Log the metrics file to MLflow
             mlflow.log_artifact('reports/metrics.json')
 
-            # Log the model info file to MLflow
-            mlflow.log_artifact('reports/model_info.json')
+            # Log the experiment info file to MLflow
+            mlflow.log_artifact('reports/experiment_info.json')
 
-            # Log the evaluation errors log file to MLflow
-            mlflow.log_artifact('model_evaluation_errors.log')
+            # Log the evaluation errors log file to MLflow (if it exists)
+            if os.path.exists('model_evaluation_errors.log'):
+                mlflow.log_artifact('model_evaluation_errors.log')
         except Exception as e:
             logger.error('Failed to complete the model evaluation process: %s', e)
             print(f"Error: {e}")
