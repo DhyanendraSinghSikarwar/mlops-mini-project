@@ -28,3 +28,11 @@ Now, we will create DVC pipeline along with best combiination model
     - model evaluation
 12. add dvc.yaml and params.yaml file and then run command to execute the pipeline "dvc repro"
 13. we are also logging the model in model_evaluation file in dagshub in each run, along with those experiments
+14. setup AWS s3 to store the dataset or data versions store
+     - pip install dvc[s3] awscli 
+     - dvc remote list   # to check avaialbe stores
+     - dvc remote remove <remote_name>
+     - aws configure  # to configure the aws
+
+15. the flow we run using dvc repro, and register the model in dagshub.
+16. then create the flask app and download the model from dagshub and use for prediction
