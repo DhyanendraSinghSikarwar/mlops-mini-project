@@ -4,6 +4,8 @@ __pycache__/
 
 # C extensions
 *.so
+*.pkl
+.dvc/
 
 # Distribution / packaging
 .Python
@@ -92,3 +94,6 @@ target/
 
 # MLflow model artifacts
 notebooks/model_*
+model_*
+*.json
+*.pkl
